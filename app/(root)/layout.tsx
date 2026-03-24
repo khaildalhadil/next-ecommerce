@@ -13,7 +13,6 @@ export default function RootLayout({
       <Header />
 
       <main className="flex-1 wrapper">
-        second lqyout
         {children}
       </main>
       

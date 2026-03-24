@@ -17,7 +17,7 @@ export default function Header() {
               width={48}
               priority={true}
             />
-            <span className="hidden lg:block font-bold text-2xl ml-3" >{APP_NAME}</span>
+            <span className="hidden lg:block font-bold ml-3" >{APP_NAME}</span>
           </Link>
         </div>
         

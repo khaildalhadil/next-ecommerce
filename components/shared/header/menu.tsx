@@ -33,7 +33,6 @@ const Menu = () => {
           <SheetContent className="flex flex-col justify-center items-center text-2xl p-5">
             
             <SheetTitle>القائمة</SheetTitle>
-            
             <Button asChild variant={"outline"} className="w-full">
               <Link href={"/cart"}>
                 سلة التسوق
@@ -47,6 +46,8 @@ const Menu = () => {
                 <UserIcon />
               </Link>
             </Button>
+
+            <ModeToggle />
 
             <SheetDescription></SheetDescription>
           </SheetContent>
