@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
 import ProductPrice from "./product-price";
+import { convertToPlainObject } from "@/lib/utils";
 
 const ProductCard = ({product}: {product: Product}) => {
   return (
@@ -25,15 +26,15 @@ const ProductCard = ({product}: {product: Product}) => {
           </h2>
         </Link>
         <div className="flex-between gap-4 mt-3"> 
-          <p>{product.rating} Starts</p>
+          <p>{convertToPlainObject(product.rating)} Starts</p>
           {product.stock > 0 ? (
 
-            <p className="flex"> 
+            <span className="flex"> 
               <span className="text-xs align-super">ريال</span>
               {ProductPrice({value:product.price})}
-            </p>
+            </span>
           ): (
-            <p className="text-destructive">Out Of Stock</p>
+            <span className="text-destructive">Out Of Stock</span>
           )}
         </div>
       </CardContent>
