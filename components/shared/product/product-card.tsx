@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ProductPrice from "./product-price";
 import { convertToPlainObject } from "@/lib/utils";
+import { Product } from "@/types/type";
 
 const ProductCard = ({product}: {product: Product}) => {
   return (
@@ -31,7 +32,7 @@ const ProductCard = ({product}: {product: Product}) => {
 
             <span className="flex"> 
               <span className="text-xs align-super">ريال</span>
-              {ProductPrice({value:product.price})}
+              {ProductPrice({value:Number(product.price)})}
             </span>
           ): (
             <span className="text-destructive">Out Of Stock</span>

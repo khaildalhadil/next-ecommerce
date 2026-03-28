@@ -21,6 +21,10 @@
   @apply flex justify-center items-center;
 }
 
+.h3-bold {
+  @apply font-bold text-xl lg:text-2xl;
+}
+
 @theme inline {
 
   --font-heading: var(--font-sans);
